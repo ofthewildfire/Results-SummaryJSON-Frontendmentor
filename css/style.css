@@ -67,12 +67,6 @@ body {
    font-family: var(--ff500);
 }
 
-/* 
-.type {
-   display: flex;
-} */
-
-
 /* Left panel */
 
 .left {
@@ -229,6 +223,11 @@ body {
    width: 80%;
    display: block;
    margin: 0 auto;
+}
+
+.btn:is(:active, :focus, :hover) {
+   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+   cursor: pointer;
 }
 
 /* Media Query */
