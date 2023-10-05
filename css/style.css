@@ -7,6 +7,8 @@
    border: none;
 }
 
+/* **** Font Imports **** */
+
 @font-face {
    font-family: 'Hanken Grotesk - Medium';
    src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf);
@@ -29,8 +31,12 @@
    font-weight: 800;
 }
 
+/* **** Font Imports End **** */
+
+
+/* **** Start Reusable Variables **** */
 :root {
-   /* Color Variables */
+   /* **** Color Variables **** */
 
    --slateBlueBG-clr: hsl(252, 100%, 67%);
    --royalBlueBG-clr: hsl(241, 81%, 54%);
@@ -52,16 +58,28 @@
    --cobalt-clr: hsl(234, 85%, 45%);
    --cobaltAlpha: hsla(234, 85%, 45%, .075);
 
-   /* End of color variables */
+   /* **** End of color variables **** */
 
 
-   /* Fonts */
+   /* **** Font variables **** */
 
    --ff500: 'Hanken Grotesk - Medium', sans-serif;
    --ff700: 'Hanken Grotesk - Bold', sans-serif;
    --ff800: 'Hanken Grotesk - EBold', sans-serif;
+
+   /*  **** End of font variables **** */
+
+   /* Gradients */
+
+   --mainGradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+   --circleGradient: linear-gradient(hsla(256, 72%, 46%, 1),
+         hsla(241, 72%, 46%, 0));
+
+   /* **** End of gradient variables **** */
 }
 
+
+/* **** End of reusable variables **** */
 
 body {
    font-family: var(--ff500);
@@ -70,7 +88,7 @@ body {
 /* Left panel */
 
 .left {
-   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+   background-image: var(--mainGradient);
    text-align: center;
    display: grid;
    gap: 1.5625rem;
@@ -84,18 +102,14 @@ body {
    color: var(--lavender-clr);
    font-weight: 800;
    font-size: 1.125rem;
-
 }
 
 .result_container {
-   background-image: linear-gradient(hsla(256, 72%, 46%, 1),
-         hsla(241, 72%, 46%, 0));
+   background-image: var(--circleGradient);
    border-radius: 50%;
    height: 150px;
    width: 150px;
    margin: 0 auto;
-
-   /*  */
    display: grid;
    gap: .25em;
    place-content: center;
@@ -226,7 +240,7 @@ body {
 }
 
 .btn:is(:active, :focus, :hover) {
-   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+   background-image: var(--mainGradient);
    cursor: pointer;
 }
 
