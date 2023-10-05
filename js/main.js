@@ -1,15 +1,15 @@
-const summaryContainer = document.querySelector(".right")
+const summaryContainer = document.querySelector(".results_panel")
 
 const populateHTML = (arr) => {
 	return arr
 		.map((item) => {
-			return `<section class="res_summary">
+			return `<section class="res_summary ${item.category.toLowerCase()}">
       <div class="type">
         <img src="${item.icon}" alt="Result ${item.category} image">
         <p> ${item.category} </p>
       </div>
       <p class="res_text">
-        <span>${item.score}</span>/ 100
+        <span>${item.score}</span> / 100
       </p>
     </section>`
 		})
