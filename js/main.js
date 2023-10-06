@@ -16,8 +16,16 @@ const populateHTML = (arr) => {
 		.join("")
 }
 
-fetch(`./data.json`)
-	.then((res) => res.json())
-	.then((data) => {
-		summaryContainer.innerHTML += populateHTML(data)
-	})
+const fetchData = () => {
+	try {
+		fetch(`./data.json`)
+			.then((res) => res.json())
+			.then((data) => {
+				summaryContainer.innerHTML += populateHTML(data)
+			})
+	} catch (error) {
+		console.log(error)
+	}
+}
+
+fetchData()
