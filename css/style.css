@@ -45,15 +45,15 @@
 
    --white-clr: hsl(0, 0%, 100%);
    --paleBlue-clr: hsl(221, 100%, 96%);
-   --lavender-clr: hsl(241, 100%, 89%);
+   --lavender-clr: hsl(242, 20%, 61%);
    --darkGB-clr: hsl(224, 30%, 27%);
 
 
-   --red-clr: hsl(0, 100%, 67%);
+   --red-clr: hsl(0, 86%, 64%);
    --redAlpha: hsla(0, 100%, 67%, .075);
-   --orange-clr: hsl(39, 100%, 56%);
+   --orange-clr: hsl(39, 81%, 40%);
    --orangeAlpha: hsla(39, 100%, 56%, .075);
-   --teal-clr: hsl(166, 100%, 37%);
+   --teal-clr: hsl(166, 100%, 32%);
    --tealAlpha: hsla(166, 100%, 37%, .075);
    --cobalt-clr: hsl(234, 85%, 45%);
    --cobaltAlpha: hsla(234, 85%, 45%, .075);
@@ -83,6 +83,8 @@
 
 body {
    font-family: var(--ff500);
+   max-width: 1440px;
+   margin: 0 auto;
 }
 
 /* Left panel */
@@ -250,7 +252,7 @@ body {
 
    body {
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
       align-items: center;
       justify-content: center;
       flex-flow: column;
@@ -259,7 +261,7 @@ body {
    .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      max-width: 650px;
+      max-width: 65%;
       margin: 0 auto;
    }
 
