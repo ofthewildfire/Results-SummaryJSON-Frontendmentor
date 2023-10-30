@@ -256,16 +256,23 @@ body {
       align-items: center;
       justify-content: center;
       flex-flow: column;
+      /* background-color: black; */
    }
 
    .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      max-width: 65%;
+      max-width: 650px;
       margin: 0 auto;
+      box-shadow: 0px 0px 10px var(--paleBlue-clr);
+      border-radius: 25px;
    }
 
    .left {
+      border-radius: 25px;
+   }
+
+   .right {
       border-radius: 25px;
    }
 }
